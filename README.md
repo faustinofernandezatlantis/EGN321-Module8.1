@@ -174,7 +174,7 @@ AI assistants (such as ChatGPT / Claude) were utilized during development to ass
 
 ```
 ```
-##APP LINK
+## APP LINK
 
 https://egn321-module8-1.streamlit.app/
 
