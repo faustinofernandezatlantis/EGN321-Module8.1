@@ -20,8 +20,8 @@ Follow these exact steps to set up the environment:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/ivansuarez-AU/EGN321_Module8_Assignment8_1.git](https://github.com/ivansuarez-AU/EGN321_Module8_Assignment8_1.git)
-   cd EGN321_Module8_Assignment8_1
+   git clone [https://github.com/faustinofernandezatlantis/EGN321-Module8.1.git](https://github.com/faustinofernandezatlantis/EGN321-Module8.1.git)
+   cd EGN321_Module8.1
 
 ```
 
