@@ -173,6 +173,56 @@ python -m pytest
 AI assistants (such as ChatGPT / Claude) were utilized during development to assist with writing Streamlit UI boilerplate and Pytest fixtures. All generated logic, validations, and documentation were manually verified and tested. Detailed prompts and responses are recorded in `AI_LOG.md`.
 
 ```
+
+---
+
+### **Part 3 — Handoff Observation Table**
+
+| Step | Operator Action | Success? | Confusion Observed | Improvement Needed |
+| --- | --- | --- | --- | --- |
+| **Locate App** | Navigated to GitHub repository | Yes | Operator found repository easily via provided link. | None. |
+| **Dependencies** | Created `.venv` and ran `pip install` | Yes | Operator briefly paused on script execution policies in Windows PowerShell. | Add PowerShell activation detail to `README.md`. |
+| **Start App** | Attempted to launch application | No | Operator typed `python app.py` instead of `streamlit run app.py`. | Highlight exact launch command in Quick Start section. |
+| **Normal Workflow** | Uploaded `data/sample_input.csv` | Yes | Operator wondered what units `temperature` and `pressure` were in. | Add unit labels directly to sidebar upload section in UI. |
+| **View Logs** | Tried locating application logs | Yes | Located `logs/app.log` and used the UI Diagnostic Logs expander. | None. |
+| **Recovery** | Uploaded malformed CSV to test refusal | Yes | Read `FAILED` status banner and checked log file to understand error. | None. |
+
+---
+
+### **Part 4 — System Improvements**
+
+#### **Improvement 1: Clearer Application Launch Command**
+
+* **Before:** The initial draft of the Quick Start simply mentioned *"Start the application"*. During the silent test, the operator ran `python app.py` in terminal, which launched no server and produced no web UI.
+* **Change:** Updated Section 4 (Quick Start) and Section 5 (Normal Operation) in `README.md` to explicitly specify the command: `streamlit run app.py`.
+* **After:** The operator can launch the web interface on the first attempt without guessing or trial-and-error terminal commands.
+
+#### **Improvement 2: Explicit Engineering Unit Display on UI Input Panel**
+
+* **Before:** The UI file uploader did not clarify expected measurement units before file ingestion, causing the operator to question whether temperatures were Celsius or Fahrenheit.
+* **Change:** Updated the sidebar helper text in `app.py` and documentation Section 6 to explicitly state: `Temperature (-40.0 °C to 120.0 °C)` and `Pressure (0.0 kPa to 500.0 kPa)`.
+* **After:** Completely eliminates ambiguity regarding unit expectations before the user uploads a dataset.
+
+---
+
+### **Part 5 — Reflection**
+
+#### **Question 1: What did your partner struggle with that seemed obvious to you while you were developing the application?**
+
+> *My partner struggled with knowing the exact CLI command needed to launch a Streamlit application (`streamlit run app.py`). Because I had been developing and executing the application repeatedly, typing that command was second nature to me, leading me to gloss over it in the original draft. Seeing someone else hesitate made me realize how critical unambiguous execution steps are for an outside user.*
+
+#### **Question 2: What was the most important improvement you made after the handoff test?**
+
+> *The most important improvement was refining the execution commands in the Quick Start section and adding explicit unit indicators (°C and kPa) directly to the user interface. Clear labeling at the point of interaction prevents invalid data submissions before processing even begins.*
+
+#### **Question 3: If you could no longer support this application personally, what additional documentation or automation would you add?**
+
+> *If I could no longer support this tool, I would add a containerized environment setup using Docker (`Dockerfile` and `docker-compose.yml`) so users could launch the entire system with a single command without worrying about local Python version mismatches. Additionally, I would set up a GitHub Actions CI pipeline to run `pytest` automatically on every commit.*
+
+---
+
+
+
 ```
 ## APP LINK
 
