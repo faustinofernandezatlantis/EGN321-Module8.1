@@ -173,3 +173,9 @@ python -m pytest
 AI assistants (such as ChatGPT / Claude) were utilized during development to assist with writing Streamlit UI boilerplate and Pytest fixtures. All generated logic, validations, and documentation were manually verified and tested. Detailed prompts and responses are recorded in `AI_LOG.md`.
 
 ```
+```
+##APP LINK
+
+https://egn321-module8-1.streamlit.app/
+
+```
