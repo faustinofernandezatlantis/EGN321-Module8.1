@@ -1,0 +1,10 @@
+INFO: TEST_EVENT: Executing Pytest validation check.
+2026-10-25 12:31:08 [INFO] Application initialized with status: HEALTHY
+2026-10-25 12:31:24 [INFO] File uploaded: datasample_input.csv
+2026-10-25 12:31:24 [INFO] Successfully processed 4 records from datasample_input.csv
+2026-10-25 19:57:12 [INFO] Application initialized with status: HEALTHY
+2026-10-25 19:57:21 [INFO] File uploaded: datasample_input.csv
+2026-10-25 19:57:21 [INFO] Successfully processed 4 records from datasample_input.csv
+2026-10-25 20:50:27 [INFO] File uploaded: datasample_input.csv
+2026-10-25 20:50:27 [INFO] Successfully processed 100 records from datasample_input.csv
+INFO: TEST_EVENT: Executing Pytest validation check.
