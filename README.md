@@ -173,7 +173,7 @@ python -m pytest
 AI assistants (such as ChatGPT / Claude) were utilized during development to assist with writing Streamlit UI boilerplate and Pytest fixtures. All generated logic, validations, and documentation were manually verified and tested. Detailed prompts and responses are recorded in `AI_LOG.md`.
 
 ```
-
+```
 ---
 
 ### **Part 3 — Handoff Observation Table**
@@ -220,7 +220,7 @@ AI assistants (such as ChatGPT / Claude) were utilized during development to ass
 > *If I could no longer support this tool, I would add a containerized environment setup using Docker (`Dockerfile` and `docker-compose.yml`) so users could launch the entire system with a single command without worrying about local Python version mismatches. Additionally, I would set up a GitHub Actions CI pipeline to run `pytest` automatically on every commit.*
 
 ---
-
+```
 
 
 ```
